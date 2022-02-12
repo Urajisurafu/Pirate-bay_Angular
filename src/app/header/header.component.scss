@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  font-size: 36px;
+  background: rgba(9, 0, 0, 0.7);
+  text-align: center;
+  justify-content: center;
+
+  .text {
+    position: absolute;
+  }
+
+  .buttons {
+    margin-left: auto;
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+
+    .button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 42px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button:hover {
+      background-color: #e5ce2a;
+    }
+  }
+}

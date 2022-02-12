@@ -1,0 +1,25 @@
+<nav class="mail-nav">
+  <ul>
+    <li routerLink="/main/lonely-island-bay" routerLinkActive="active">
+      Бухта одинокого острова
+    </li>
+    <li routerLink="/main/my-ship" routerLinkActive="active">Мой корабль</li>
+  </ul>
+</nav>
+<main class="main">
+  <aside class="aside">
+    <table class="table">
+      <tr class="section">
+        <td>Мин. цена <input type="number" /></td>
+        <td>Макс. цена <input type="number" /></td>
+      </tr>
+      <tr>
+        <td>Мин. прочность <input type="number" /></td>
+        <td>Макс. прочность <input type="number" /></td>
+      </tr>
+    </table>
+    <div class="choice-section">Паруса</div>
+    <div class="choice-section">Пушки</div>
+  </aside>
+  <router-outlet></router-outlet>
+</main>

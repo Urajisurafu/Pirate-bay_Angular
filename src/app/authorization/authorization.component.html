@@ -1,0 +1,41 @@
+<div class="authorization">
+  <div class="authorization-form">
+    <form>
+      <div class="block">
+        <label>Логин</label>
+        <input name="login" type="text" [(ngModel)]="loginForm.login" />
+      </div>
+      <div class="block indent">
+        <label>Пароль</label>
+        <input
+          name="password"
+          type="password"
+          [(ngModel)]="loginForm.password"
+          required
+        />
+      </div>
+
+      <div class="input-and-button indent">
+        <div>
+          <input
+            required
+            [(ngModel)]="loginForm.isRemember"
+            class="remember"
+            type="checkbox"
+            id="fb"
+            name="answer1"
+          />
+          <label for="fb"><span></span>Запомнить логин и пароль</label>
+        </div>
+        <button
+          class="login"
+          (click)="printForm()"
+          routerLink="/main"
+          routerLinkActive="active"
+        >
+          Войти
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

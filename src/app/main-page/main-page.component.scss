@@ -1,0 +1,55 @@
+.mail-nav {
+  background: rgba(83, 82, 82, 0.7);
+
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      cursor: pointer;
+      border: black solid 5px;
+      color: white;
+      font-size: 22px;
+      list-style-type: none;
+      padding: 15px 40px;
+    }
+  }
+  ul li:not(:first-of-type) {
+    border-left: none;
+  }
+}
+.main {
+  display: flex;
+
+  .aside {
+    color: white;
+    flex-basis: 20%;
+    background: rgba(58, 167, 222, 0.8);
+    .table {
+      display: flex;
+      flex-direction: column;
+
+      tr {
+        display: flex;
+      }
+
+      td {
+        border: black solid 1px;
+        flex-basis: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      td input {
+        width: 80%;
+      }
+    }
+  }
+
+  .choice-section {
+    border: black solid 1px;
+    padding: 25px;
+    cursor: pointer;
+  }
+}
