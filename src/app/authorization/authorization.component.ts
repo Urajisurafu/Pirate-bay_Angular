@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { loginForm } from '../interfaces';
+import { loginForm } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-authorization',

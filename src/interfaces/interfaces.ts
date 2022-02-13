@@ -1,4 +1,5 @@
 export interface ship {
+  id: number;
   img: string;
   frigate: string;
   class: number;

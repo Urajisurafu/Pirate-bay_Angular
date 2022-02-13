@@ -1,5 +1,5 @@
 <section class="cards">
-  <div *ngFor="let item of ships">
+  <div *ngFor="let item of ships" (click)="shipClick($event)">
     <app-card [ship]="item"></app-card>
   </div>
 </section>
