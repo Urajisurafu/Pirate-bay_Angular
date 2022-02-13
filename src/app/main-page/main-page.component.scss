@@ -23,6 +23,7 @@
   display: flex;
 
   .aside {
+    height: 100%;
     color: white;
     flex-basis: 20%;
     background: rgba(58, 167, 222, 0.8);
@@ -45,6 +46,10 @@
         width: 80%;
       }
     }
+  }
+
+  .content {
+    flex-basis: 80%;
   }
 
   .choice-section {

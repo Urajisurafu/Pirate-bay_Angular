@@ -1,1 +1,5 @@
-<section>Бухта одинокого острова</section>
+<section class="cards">
+  <div *ngFor="let item of ships">
+    <app-card [ship]="item"></app-card>
+  </div>
+</section>

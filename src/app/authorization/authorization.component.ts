@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { loginForm } from '../interfaces';
 
 @Component({
   selector: 'app-authorization',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./authorization.component.scss'],
 })
 export class AuthorizationComponent {
-  loginForm: any = {
+  loginForm: loginForm = {
     login: '',
     password: '',
     isRemember: false,

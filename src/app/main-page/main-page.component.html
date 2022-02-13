@@ -1,6 +1,10 @@
 <nav class="mail-nav">
-  <ul>
-    <li routerLink="/main/lonely-island-bay" routerLinkActive="active">
+  <ul #myNameElem (click)="changePage($event)">
+    <li
+      routerLink="/main/lonely-island-bay"
+      routerLinkActive="active"
+      style="border-bottom: none"
+    >
       Бухта одинокого острова
     </li>
     <li routerLink="/main/my-ship" routerLinkActive="active">Мой корабль</li>
@@ -21,5 +25,7 @@
     <div class="choice-section">Паруса</div>
     <div class="choice-section">Пушки</div>
   </aside>
-  <router-outlet></router-outlet>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>

@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LonelyIslandBayComponent } from './lonely-island-bay/lonely-island-bay.component';
 import { MyShipComponent } from './my-ship/my-ship.component';
+import { CardComponent } from './card/card.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,7 @@ const routes: Routes = [
     MainPageComponent,
     LonelyIslandBayComponent,
     MyShipComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
