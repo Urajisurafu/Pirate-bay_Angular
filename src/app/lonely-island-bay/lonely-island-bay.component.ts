@@ -11,7 +11,7 @@ import { ship } from '../../interfaces/interfaces';
 export class LonelyIslandBayComponent implements OnInit {
   ships: ship[] = [];
 
-  constructor(private httpService: ShipsService) {}
+  constructor(public httpService: ShipsService) {}
 
   ngOnInit() {
     this.httpService
