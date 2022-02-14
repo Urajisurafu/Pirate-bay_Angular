@@ -2,7 +2,7 @@ export interface ship {
   id: number;
   img: string;
   frigate: string;
-  class: number;
+  frigateClass: number;
   guns: number;
   frame: number;
   team: number;
