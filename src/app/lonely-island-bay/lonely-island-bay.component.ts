@@ -11,7 +11,8 @@ export class LonelyIslandBayComponent {
 
   shipClick(event: any) {
     const div = event.target.closest('.card');
-    console.log(div.id);
+    const selectedShip = ships.find((ship) => ship.id === Number(div.id));
+    console.log(selectedShip);
   }
   constructor() {}
 }
