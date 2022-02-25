@@ -1,40 +1,47 @@
 <div class="authorization">
   <div class="authorization-form">
-    <form>
+    <form [formGroup]="loginForm">
       <div class="block">
         <label>Логин</label>
-        <input name="login" type="text" [(ngModel)]="loginForm.login" />
+        <input type="text" formControlName="login" />
+        <div *ngIf="_login.invalid && (_login.touched || _login.dirty)">
+          <span *ngIf="_login.errors?.required"
+            >Поле не должно быть пустым
+          </span>
+          <span *ngIf="_login.errors['minlength']"
+            >Длина должна быть больше или равна
+            {{ _login.errors["minlength"].requiredLength }} символов
+          </span>
+        </div>
       </div>
+
       <div class="block indent">
         <label>Пароль</label>
-        <input
-          name="password"
-          type="password"
-          [(ngModel)]="loginForm.password"
-          required
-        />
+        <input type="password" formControlName="password" />
+        <div
+          *ngIf="_password.invalid && (_password.touched || _password.dirty)"
+        >
+          <span *ngIf="_password.errors?.required"
+            >Поле не должно быть пустым
+          </span>
+          <span *ngIf="_password.errors['minlength']"
+            >Длина должна быть больше или равна
+            {{ _password.errors["minlength"].requiredLength }} символов
+          </span>
+        </div>
       </div>
 
       <div class="input-and-button indent">
         <div>
           <input
-            required
-            [(ngModel)]="loginForm.isRemember"
-            class="remember"
-            type="checkbox"
+            formControlName="isSave"
             id="fb"
-            name="answer1"
+            type="checkbox"
+            class="remember"
           />
           <label for="fb"><span></span>Запомнить логин и пароль</label>
         </div>
-        <button
-          class="login"
-          (click)="printForm()"
-          routerLink="/main"
-          routerLinkActive="active"
-        >
-          Войти
-        </button>
+        <button (click)="printForm()" class="login">Войти</button>
       </div>
     </form>
   </div>

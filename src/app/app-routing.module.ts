@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { LonelyIslandBayComponent } from './lonely-island-bay/lonely-island-bay.component';
-import { MyShipComponent } from './my-ship/my-ship.component';
 
 const routes: Routes = [
   {
@@ -16,11 +14,15 @@ const routes: Routes = [
     children: [
       {
         path: 'lonely-island-bay',
-        component: LonelyIslandBayComponent,
+        loadChildren: () =>
+          import('./pages/lonely-island-bay/lonely-island-bay.module').then(
+            (m) => m.LonelyIslandBayModule
+          ),
       },
       {
         path: 'my-ship',
-        component: MyShipComponent,
+        loadChildren: () =>
+          import('./pages/my-ship/my-ship.module').then((m) => m.MyShipModule),
       },
     ],
   },

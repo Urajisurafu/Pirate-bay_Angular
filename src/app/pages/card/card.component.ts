@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { ship } from '../../interfaces/interfaces';
+import { ship } from '../../../interfaces/interfaces';
 
 @Component({
-  selector: 'app-card',
+  selector: 'ship-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })

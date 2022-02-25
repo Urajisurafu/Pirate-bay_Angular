@@ -1,0 +1,22 @@
+<div class="bar">
+  <input
+    id="search"
+    [(ngModel)]="searchInput"
+    type="text"
+    placeholder="Enter the name of your series"
+    (keyup)="filterByFrigate($event)"
+  />
+</div>
+<section class="cards">
+  <div
+    [style.display]="!this.httpService.errorMessage ? 'none' : 'block'"
+    class="error"
+  >
+    {{ this.httpService.errorMessage }}
+  </div>
+  <button (click)="addAquaticCreature()">Add creature</button>
+  <show-cards
+    (getSelectedShip)="getSelectedShip($event)"
+    [ships]="searchResult"
+  ></show-cards>
+</section>

@@ -1,0 +1,6 @@
+<button (click)="refresh()">Refresh</button>
+<div class="cards">
+  <div *ngFor="let item of ships" (click)="shipClick($event)">
+    <ship-card [ship]="item"></ship-card>
+  </div>
+</div>
